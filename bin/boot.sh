@@ -25,6 +25,12 @@ mv $conf_file $APP_ROOT/nginx/conf/orig.conf
 erb $APP_ROOT/nginx/conf/orig.conf > $APP_ROOT/nginx/conf/nginx.conf
 
 # ------------------------------------------------------------------------------------------------
+echo 3 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+printenv
+pwd
+echo App root: $APP_ROOT
+ls -l $APP_ROOT
+echo 3.1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 mkfifo $APP_ROOT/nginx/logs/access.log
 mkfifo $APP_ROOT/nginx/logs/error.log
